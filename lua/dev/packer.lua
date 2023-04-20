@@ -27,6 +27,12 @@ return require('packer').startup(function(use)
   use("tpope/vim-fugitive")
 
   use {
+      "folke/which-key.nvim",
+      config = function()
+          require("config.whichkey").setup()
+      end,
+  }
+  use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
 	  requires = {
